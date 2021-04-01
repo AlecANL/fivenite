@@ -1,0 +1,83 @@
+@use '../utils/mixins' as m;
+
+.navbar {
+  display: none;
+}
+.world-icon,
+.search-icon,
+.btn--transparent {
+  display: none;
+  @include m.from(l) {
+    display: block;
+  }
+}
+.b-flex {
+  @include m.from(l) {
+    padding-block: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.world-icon,
+.search-icon {
+  margin-inline: 5px;
+}
+
+.icon-burger {
+  position: relative;
+  inline-size: 50px;
+  block-size: 50px;
+  box-sizing: border-box;
+  padding-inline: 9px;
+  &.is-active .line {
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  &.is-active .line::before {
+    inset-block-start: 0;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  &.is-active .line::after {
+    inset-block-end: 0;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  @include m.from(l) {
+    position: absolute;
+    inset-inline-start: 130px;
+    inset-block-start: 5px;
+  }
+  @include m.from(xl) {
+    display: none;
+  }
+}
+.line {
+  position: relative;
+  inline-size: 100%;
+  inset-block-start: 50%;
+  block-size: 3px;
+  background-color: var(--soft-gray);
+  transform: translateY(-50%);
+  &::before {
+    content: '';
+    position: absolute;
+    inline-size: 100%;
+    block-size: 2.5px;
+    background-color: var(--soft-gray);
+    inset-block-start: -8px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    inline-size: 100%;
+    block-size: 2.5px;
+    background-color: var(--soft-gray);
+    inset-block-end: -8px;
+  }
+}
+.buttons {
+  display: flex;
+}

@@ -1,0 +1,18 @@
+@use '../utils/mixins' as m;
+.header {
+  position: fixed;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  block-size: 56px;
+  background-color: var(--soft-black);
+}
+.header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 7px;
+  @include m.from(l) {
+    margin-inline-end: 0;
+  }
+}

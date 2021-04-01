@@ -1,0 +1,21 @@
+.btn {
+  border: none;
+  padding-block: 16.5px;
+  padding-inline: 25px;
+  font-size: 12px;
+  line-height: 24px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.btn--yellow {
+  background-color: var(--just-yellow);
+  text-transform: uppercase;
+}
+.btn--transparent {
+  background-color: transparent;
+  color: var(--just-white);
+  text-transform: uppercase;
+}
