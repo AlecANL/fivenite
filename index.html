@@ -32,7 +32,7 @@
             class="fivenite-logo"
           />
         </div>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
           <ul class="navbar__list">
             <li class="navbar__item"><a href="#">pase de batalla</a></li>
             <li class="navbar__item"><a href="#">modo creativo</a></li>
@@ -40,6 +40,14 @@
             <li class="navbar__item"><a href="#">competitivo</a></li>
             <li class="navbar__item"><a href="#">ayuda</a></li>
           </ul>
+          <div class="buttons-box">
+            <input placeholder="Search..." type="text" aria-label="search" />
+            <button class="btn btn--transparent b-flex">
+              <img src="./src/assets/icons/user.svg" alt="user icon" />
+              <span>iniciar sesión</span>
+            </button>
+            <img src="./src/assets/images/globe.svg" alt="world icon" />
+          </div>
         </nav>
         <div class="buttons">
           <img
@@ -57,11 +65,12 @@
             <span>iniciar sesión</span>
           </button>
           <button class="btn btn--yellow">descargar</button>
-          <div class="icon-burger">
+          <div class="icon-burger" id="menu-icon">
             <div class="line"></div>
           </div>
         </div>
       </div>
     </header>
+    <script src="./src/js/app.js"></script>
   </body>
 </html>
