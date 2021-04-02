@@ -1,0 +1,27 @@
+@use '../utils/mixins' as m;
+
+.footer {
+  background-color: var(--soft-black);
+  a {
+    color: var(--soft-gray);
+  }
+}
+
+.footer-content {
+  margin-inline: 16px;
+  padding-block-start: 50px;
+}
+.list-content {
+  padding-block: 20px;
+  ul {
+    padding-block: 20px;
+  }
+  ul li {
+    margin-block: 8px;
+  }
+  @include m.from(m) {
+    display: flex;
+    // justify-content: space-between;
+    gap: 64px;
+  }
+}

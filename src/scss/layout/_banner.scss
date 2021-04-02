@@ -8,3 +8,63 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.banner-2 {
+  position: relative;
+  inline-size: 100%;
+  block-size: 300px;
+  background-image: url(../assets/images/bg-banner2.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .btn {
+    position: absolute;
+    // inset-block-start: 50%;
+    inset-inline-start: 50%;
+    inset-block-end: 50px;
+    transform: translateX(-50%);
+    block-size: 80px;
+    inline-size: 252px;
+    font-size: 16px;
+    text-align: center;
+    clip-path: polygon(
+      88.275% 66.35%,
+      86.615% 94.231%,
+      20.9% 94.231%,
+      22.601% 30.652%,
+      20.6% 25.455%,
+      19.6% 22.727%,
+      14.4% 17.273%,
+      10.2% 18.182%,
+      16.8% 12.727%,
+      24.387% 16.706%,
+      28.596% 16.005%,
+      32.6% 10.909%,
+      21.2% 9.091%,
+      0% 3.636%,
+      30.6% 3.636%,
+      33.2% 0%,
+      47.2% 4.545%,
+      50.2% 7.273%,
+      64.4% 8.182%,
+      69.67% 9.159%,
+      91.9% 5.455%,
+      89.284% 49.392%,
+      92.2% 54.545%,
+      92.6% 58.182%,
+      98.4% 64.545%,
+      88.275% 66.35%
+    );
+    p {
+      font-size: 23px;
+      padding-block: 10px;
+      padding-inline: 33px;
+      padding-inline-start: 50px;
+    }
+  }
+  @include m.from(l) {
+    block-size: 500px;
+  }
+  @include m.from(xl) {
+    block-size: 768px;
+  }
+}

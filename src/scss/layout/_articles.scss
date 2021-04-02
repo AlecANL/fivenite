@@ -29,6 +29,10 @@
       font-size: 65px;
       line-height: 55px;
     }
+    article p {
+      font-size: 19px;
+      line-height: 21px;
+    }
   }
 
   @include m.from(xl) {

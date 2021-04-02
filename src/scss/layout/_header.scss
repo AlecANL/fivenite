@@ -5,6 +5,7 @@
   inset-inline-end: 0;
   block-size: 56px;
   background-color: var(--soft-black);
+  z-index: 10000;
 }
 .header-content {
   position: relative;
