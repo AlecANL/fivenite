@@ -1,0 +1,37 @@
+@use '../utils/mixins' as m;
+
+.main-content {
+  text-align: center;
+  margin-inline: 16px;
+  article h2 {
+    color: #4dccfa;
+    font-size: 32px;
+  }
+  article p {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  @include m.from(m) {
+    padding-inline: 50px;
+  }
+  @include m.from(l) {
+    padding-inline: 80px;
+    article {
+      margin-block-end: 100px;
+    }
+    article p {
+      padding-inline: 100px;
+    }
+  }
+  @include m.from(x) {
+    article h2 {
+      font-size: 65px;
+      line-height: 55px;
+    }
+  }
+
+  @include m.from(xl) {
+    margin-block-end: 128px;
+  }
+}
