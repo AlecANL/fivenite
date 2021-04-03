@@ -10,20 +10,24 @@
 }
 .banner-2 {
   position: relative;
+  display: flex;
   inline-size: 100%;
+  align-items: flex-end;
+  justify-content: center;
   block-size: 300px;
   background-image: url(../assets/images/bg-banner2.png);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   .btn {
-    position: absolute;
+    // position: absolute;
     // inset-block-start: 50%;
-    inset-inline-start: 50%;
-    inset-block-end: 50px;
-    transform: translateX(-50%);
-    block-size: 80px;
-    inline-size: 252px;
+    // inset-inline-start: 50%;
+    // inset-block-end: 50px;
+    // transform: translateX(-50%);
+    // block-size: 80px;
+    // inline-size: 252px;
+    animation: slideTo 1s ease-in infinite alternate;
     font-size: 16px;
     text-align: center;
     clip-path: polygon(
@@ -66,5 +70,14 @@
   }
   @include m.from(xl) {
     block-size: 768px;
+  }
+}
+
+@keyframes slideTo {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(1.1);
   }
 }

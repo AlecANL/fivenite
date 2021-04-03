@@ -25,6 +25,8 @@
   }
   a {
     color: var(--just-white);
+    text-transform: uppercase;
+    font-size: 14px;
   }
   @include m.from(xl) {
     position: initial;
@@ -192,4 +194,7 @@
   @include m.from(l) {
     display: none;
   }
+}
+.b-scale {
+  transform: scale(0);
 }

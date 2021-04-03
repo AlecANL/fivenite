@@ -89,6 +89,8 @@ img {
 }
 .navbar a {
   color: var(--just-white);
+  text-transform: uppercase;
+  font-size: 14px;
 }
 @media screen and (min-width: 1366px) {
   .navbar {
@@ -273,6 +275,10 @@ img {
   }
 }
 
+.b-scale {
+  transform: scale(0);
+}
+
 .banner {
   inline-size: 100%;
   block-size: 100vh;
@@ -284,7 +290,10 @@ img {
 
 .banner-2 {
   position: relative;
+  display: flex;
   inline-size: 100%;
+  align-items: flex-end;
+  justify-content: center;
   block-size: 300px;
   background-image: url(../assets/images/bg-banner2.png);
   background-position: top;
@@ -292,12 +301,7 @@ img {
   background-repeat: no-repeat;
 }
 .banner-2 .btn {
-  position: absolute;
-  inset-inline-start: 50%;
-  inset-block-end: 50px;
-  transform: translateX(-50%);
-  block-size: 80px;
-  inline-size: 252px;
+  animation: slideTo 1s ease-in infinite alternate;
   font-size: 16px;
   text-align: center;
   clip-path: polygon(88.275% 66.35%, 86.615% 94.231%, 20.9% 94.231%, 22.601% 30.652%, 20.6% 25.455%, 19.6% 22.727%, 14.4% 17.273%, 10.2% 18.182%, 16.8% 12.727%, 24.387% 16.706%, 28.596% 16.005%, 32.6% 10.909%, 21.2% 9.091%, 0% 3.636%, 30.6% 3.636%, 33.2% 0%, 47.2% 4.545%, 50.2% 7.273%, 64.4% 8.182%, 69.67% 9.159%, 91.9% 5.455%, 89.284% 49.392%, 92.2% 54.545%, 92.6% 58.182%, 98.4% 64.545%, 88.275% 66.35%);
@@ -319,6 +323,14 @@ img {
   }
 }
 
+@keyframes slideTo {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(1.1);
+  }
+}
 .main-content {
   text-align: center;
   margin-inline: 16px;
